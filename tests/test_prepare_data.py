@@ -1,4 +1,10 @@
-﻿from sklearn.datasets import load_iris
+﻿import sys
+from pathlib import Path
+
+# Add project root to sys.path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from sklearn.datasets import load_iris
 from iris_project.transformers.prepare_data import transform
 
 def test_split_is_80_20():
